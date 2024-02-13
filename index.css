@@ -2,22 +2,35 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: "Ubuntu", sans-serif;
-    color: #FFFFFF;
     text-decoration: none;
     list-style-type: none;
+    color: #FFFFFF;
     font-size: 16px;
+
+    /* Disable the highlight */
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }
 
 body {
+    height: 200vh;
+    font-family: "Ubuntu", sans-serif;
     background-color: #050505;
 }
 
+
+/* Navigation bar */
 nav {
-    position: relative;
+    position: fixed;
     /*background-color: red; comment temporary for checking*/
     padding: 20px;
     text-align: center;
+    top: 0;
+    width: 100%;
     
 }
 
@@ -26,10 +39,17 @@ nav ul li {
 }
 
 .nav-cmdbox {
-    background-color: rgba(31, 31, 31, 0.7);
-    padding: 10px 30em 1em 1em;
+    background-color: rgba(31, 31, 31, 0.9);
+    padding: 14px 30em 1em 1em;
     margin: 0 20px 0 20px;
     border-radius: 15px;
+    border: 1px solid rgb(31, 31, 31);
+}
+
+.nav-cmdbox:hover {
+    transition: all 0.5s ease;
+    background-color: rgba(56, 56, 56, 0.9);
+    border: 1px solid rgb(143, 141, 141);
 }
 
 .nav-cmdbox ul li p {
@@ -40,18 +60,18 @@ nav ul li {
     padding-right: 20px;
 }
 
+.nav-icons ul li i:hover {
+    color: #474747;
+}
+
 /* hero-section */
 .hero-section {
-    padding-top: 8em;
+    margin-top: 8em;
     text-align: center;
 }
 
 .hero-section ul {
     padding-bottom: 20px;
-}
-
-.hero-section ul li {
-    text-align: center;
 }
 
 /* file-container box */
@@ -91,8 +111,3 @@ nav ul li {
 }
 
 /* hero-introduction */
-.hero-introduction {
-    
-   
-    
-}
