@@ -39,16 +39,17 @@ nav ul li {
 }
 
 .nav-cmdbox {
-    background-color: rgba(31, 31, 31, 0.9);
+    background-color: rgba(31, 31, 31, 0.3);
     padding: 14px 30em 1em 1em;
     margin: 0 20px 0 20px;
     border-radius: 15px;
     border: 1px solid rgb(31, 31, 31);
+    backdrop-filter: blur(10px);
 }
 
 .nav-cmdbox:hover {
     transition: all 0.5s ease;
-    background-color: rgba(56, 56, 56, 0.9);
+    background-color: rgba(88, 88, 88, 0.3);
     border: 1px solid rgb(143, 141, 141);
 }
 
@@ -66,7 +67,7 @@ nav ul li {
 
 /* hero-section */
 .hero-section {
-    margin-top: 15em;
+    margin-top: 10em;
     text-align: center;
 }
 
