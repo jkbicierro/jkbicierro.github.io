@@ -22,16 +22,14 @@ body {
     background-color: #050505;
 }
 
-
 /* Navigation bar */
 nav {
     position: fixed;
-    /*background-color: red; comment temporary for checking*/
+    width: 100%;
+    top: 0;
+  
     padding: 20px;
     text-align: center;
-    top: 0;
-    width: 100%;
-    
 }
 
 nav ul li {
