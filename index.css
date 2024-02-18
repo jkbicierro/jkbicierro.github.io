@@ -156,14 +156,39 @@ nav #icon {
     align-items: center;
     height: 100px;
     overflow: hidden;
+    position: relative;
+}
+
+.tools-section:before,
+.tools-section:after {
+  position: absolute;
+  top: 0;
+  width: 45em;
+  height: 100%;
+  content: "";
+  z-index: 1;
+}
+.tools-section:before {
+    left: 0;
+}
+.tools-section:after {
+    right: 0;
+}
+
+.tools-section:before {
+    background: linear-gradient(to left, rgba(0, 0, 0, 0), var(--black));
+}
+
+.tools-section:after {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), var(--black));
 }
 
 .logo-slide {
     display: inline-block;
-    animation: 100s slide infinite linear;
+    animation: 250s slide infinite linear;
 }
 
 .logo-slide img {
     height: 45px;
     margin: 0 40px;
-  }
+}
