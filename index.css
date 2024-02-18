@@ -24,7 +24,8 @@
     user-select: none;
 }
 body {
-    transition: background-color 0.3s ease;
+    height: 200vh;
+    transition: background-color 0.5s ease;
 }
 body[data-mode="dark"] {
     background-color: var(--black);
@@ -50,6 +51,9 @@ nav {
 
     z-index: 1;
 }
+nav a {
+    color: var(--white);
+}
 .nav-cmdbox {
     position: relative;
 }
@@ -67,6 +71,8 @@ nav {
     border: 1px solid rgb(31, 31, 31);
     backdrop-filter: blur(10px);
     width: 35em;
+    
+    color:var(--white);
 }
 .nav-cmdbox input[type=text]:hover {
     transition: all 0.5s ease;
@@ -86,7 +92,6 @@ nav #icon {
 
 /* Section: Hero Section */
 .hero-section {
-    border: 1px solid green;
     position: relative;
     height: 20em;
     margin-top: 90px;
@@ -98,7 +103,7 @@ nav #icon {
     justify-content: center;
     text-align: center;
 
-    color: var(--grey);
+    color: var(--white);
 }
 
 /*--*/
