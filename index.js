@@ -21,14 +21,9 @@ document.onkeydown = function(e) {
 const coords = { x: 0, y: 0 };
 const circles = document.querySelectorAll(".circle");
 
-const colors = [
-  "#4800ff", "#3b0bed", "#2e11dc", "#2214ca", "#1515b8", "#0816a7", "#001595", "#001484", "#001273", "#001062", "#000d52", "#000842"
-];
-
 circles.forEach(function (circle, index) {
   circle.x = 0;
   circle.y = 0;
-  //circle.style.backgroundColor = colors[index % colors.length];
 });
 
 window.addEventListener("mousemove", function(e){
@@ -38,7 +33,6 @@ window.addEventListener("mousemove", function(e){
 });
 
 function animateCircles() {
-  
   let x = coords.x;
   let y = coords.y;
   
