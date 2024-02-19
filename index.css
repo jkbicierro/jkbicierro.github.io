@@ -2,7 +2,6 @@
     index.css
 */
 :root {
-    color-scheme: light dark;
     --grey: #6B6B6B;
     --white: #e7e5e5;
     --black: #050505;
@@ -12,6 +11,7 @@
     padding: 0;
     text-decoration: none;
     list-style-type: none;
+    box-sizing: border-box;
     
     font-family: "Ubuntu", sans-serif;
     font-size: 16px;
@@ -26,7 +26,7 @@
 }
 body {
     height: 200vh;
-    transition: background-color 0.5s ease;
+    transition: background-color 0.8s ease;
 }
 body[data-mode="dark"] {
     background-color: var(--black);
@@ -50,7 +50,7 @@ nav {
     align-items: center;
     justify-content: center;
 
-    z-index: 1;
+    z-index: 2;
 }
 nav a {
     color: inherit;
@@ -66,24 +66,24 @@ nav a {
     z-index: 1;
 }
 .nav-cmdbox input {
-    background-color: rgba(31, 31, 31, 0.3);
     margin: 0 25px 0 25px;
     border-radius: 15px;
     padding: 14px 1em 1em 4em;
-    border: 1px solid rgb(31, 31, 31);
-    backdrop-filter: blur(10px);
     width: 35em;
+
+    backdrop-filter: blur(10px);
     
+    background-color: rgba(88, 88, 88, 0.3);
     color: inherit;
+
+    border: none;
+    
 }
 .nav-cmdbox input[type=text]:hover {
     transition: all 0.5s ease;
-    background-color: rgba(88, 88, 88, 0.3);
-    border: 1px solid rgb(143, 141, 141);
+    background-color: rgba(121, 121, 121, 0.3);
 }
-.nav-cmdbox input[type=text]:focus {
-    outline: 1px solid rgb(143, 141, 141);   
-}
+
 nav #icon {
     margin-right: 25px;
 }
@@ -149,7 +149,9 @@ nav #icon {
     padding-bottom: 12px;
 }
 
-/**/
+/* 
+    Section: Tools/Expertise 
+*/
 .tools-section {
     display: flex;
     white-space: nowrap;
@@ -157,38 +159,44 @@ nav #icon {
     height: 100px;
     overflow: hidden;
     position: relative;
+ 
 }
-
-.tools-section:before,
-.tools-section:after {
-  position: absolute;
-  top: 0;
-  width: 45em;
-  height: 100%;
-  content: "";
-  z-index: 1;
-}
-.tools-section:before {
-    left: 0;
-}
-.tools-section:after {
-    right: 0;
-}
-
-.tools-section:before {
-    background: linear-gradient(to left, rgba(0, 0, 0, 0), var(--black));
-}
-
-.tools-section:after {
-    background: linear-gradient(to right, rgba(0, 0, 0, 0), var(--black));
-}
-
-.logo-slide {
+.textdraw-slide {
     display: inline-block;
-    animation: 250s slide infinite linear;
+    animation: 100s slide infinite linear;
 }
-
-.logo-slide img {
+.textdraw-slide img {
     height: 45px;
     margin: 0 40px;
+}
+.tools-section:hover .textdraw-slide {
+    animation-play-state: paused;
+}
+
+.tools-section::before, .tools-section::after {
+    position: absolute;
+    top: 0;
+    width: 10%;
+    height: 100%;
+    content: "";
+    z-index: 1;
+    transition: background-color 0.8s ease;
+}
+
+body[data-mode="dark"] .tools-section::before {
+    left: 0;
+    background-color: var(--black);
+}
+body[data-mode="dark"] .tools-section::after {
+    right: 0;
+    background-color: var(--black);
+}
+body[data-mode="light"] .tools-section::before {
+    left: 0;
+    background-color: var(--white);
+    
+}
+body[data-mode="light"] .tools-section::after {
+    right: 0;
+    background-color: var(--white);
 }
