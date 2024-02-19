@@ -1,4 +1,18 @@
+// Dark and light mode
 function toggleMode() {
-    const body = document.body;
-    body.dataset.mode = body.dataset.mode === 'light' ? 'dark' : 'light';
-  }
+  const body = document.body;
+  body.dataset.mode = body.dataset.mode === 'light' ? 'dark' : 'light';
+}
+
+// Can't right click
+document.addEventListener('contextmenu', function (e) {
+  e.preventDefault();
+});
+
+// Can't press console (Need to update - deprecated codes)
+document.onkeydown = function(e) { 
+  if(event.keyCode == 123) return false; 
+  if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) return false; 
+  if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) return false; 
+  if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0))return false; 
+} 
