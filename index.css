@@ -87,6 +87,7 @@ nav a {
 }
 nav #icon {
     margin-right: 25px;
+
 }
 #icon:hover {
     transition: all 0.2s ease;
