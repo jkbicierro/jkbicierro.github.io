@@ -12,10 +12,11 @@
     text-decoration: none;
     list-style-type: none;
     box-sizing: border-box;
+    cursor: none;
     
     font-family: "Ubuntu", sans-serif;
     font-size: 16px;
-
+    
     /* Disable the highlight */
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -192,4 +193,24 @@ body[data-mode="light"] .tools-section::before {
 body[data-mode="light"] .tools-section::after {
     right: 0;
     background-color: var(--white);
+}
+
+/*
+    Cursor Pointer
+*/
+.circle {
+    height: 10px;
+    width: 10px;
+    border-radius: 24px;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 99999999; /* so that it stays on top of all other elements */
+}
+body[data-mode="dark"] .circle {
+    background-color: var(--white);
+}
+body[data-mode="light"] .circle {
+    background-color: var(--black);
 }
