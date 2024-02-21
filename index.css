@@ -159,6 +159,15 @@ nav #icon {
     overflow: hidden;
     position: relative;
 }
+.textdraw-container {
+    overflow-x: hidden;
+    padding: 10px 0;
+    filter: grayscale(100%);
+    transition: filter 0.5s ease;
+}
+.textdraw-container:hover {
+    filter: grayscale(0%);
+}
 .textdraw-slide {
     display: inline-block;
     animation: 100s slide infinite linear;
@@ -208,6 +217,7 @@ body[data-mode="light"] .tools-section::after {
     left: 0;
     pointer-events: none;
     z-index: 99999999; /* so that it stays on top of all other elements */
+    opacity: 0;
 }
 body[data-mode="dark"] .circle {
     background-color: var(--white);
