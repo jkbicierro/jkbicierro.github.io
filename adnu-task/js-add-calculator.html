@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            height: 15em;
+            width: 20em;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .container input[type=button] {
+            align-self: flex-start;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Enter Two Numbers to Find Their Sum</h1>
+        <label for="var1">Enter first number:</label>
+        <input type="text" name="var1" id="var1">
+        <label for="var2">Enter second number:</label>
+        <input type="text" name="var2" id="var2">
+        <input type="button" value="Calculate Sum" onclick="calculateSum()" id="btn_sum">
+    </div>
+
+    <script>
+        function calculateSum() {
+            let var1 = document.getElementById("var1").value;
+            let var2 = document.getElementById("var2").value;
+            let sum = Number(var1) + Number(var2);
+            const msg = `The sum is ${sum}`;
+            document.getElementById("btn_sum").value = msg;
+        }
+    </script>
+</body>
+</html>
