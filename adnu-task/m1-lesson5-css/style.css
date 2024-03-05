@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+:root {
+    --white: #fafafa;
+    --black: #0a0a0a;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Oswald", sans-serif;
+}
+
+body {
+    background-color: lightslategray;
+}
+
+form {
+    padding: 25px;
+    background-color: var(--white);
+    border-radius: 15px;
+}
+
+form textarea[type=description],
+form input[type=text], 
+form input[type=password],
+form input[type=date],
+form input[type=email],
+form input[type=tel] {
+    background-color: var(--white);
+    border-radius: 5px;
+    width: 17em;
+    margin: 0 0 8px 0;
+}
+
+form input[type=radio] {
+    margin: 10px 3px;
+}
+
+.regform-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.btn-container {
+    width: 14.18em;
+    height: 1em;
+    gap: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    padding: 2px 35px;
+    color: var(--white);
+    border: none;
+}
+
+.button[type="submit"] {
+    background-color: green;
+}
+
+.button[type="reset"] {
+    background-color: red;
+}
+
