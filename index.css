@@ -238,7 +238,6 @@ body[data-mode="light"] .circle {
     Contact me
 */
 .contact-container {
-    border: 1px solid green;
     height: 80vh;
 
     display: flex;
